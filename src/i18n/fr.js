@@ -1,5 +1,11 @@
 export default {
-    view: 'voir',
-    next: 'suivant',
-    back: 'retour'
+    global: {
+        view: 'voir',
+        next: 'suivant',
+        back: 'retour'
+    },
+    auth: {
+        username: "Nom d'utilisateur",
+        password: 'Mot de passe'
+    }
 }

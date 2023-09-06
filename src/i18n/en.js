@@ -6,6 +6,7 @@ export default {
     },
     auth: {
         username: 'username',
-        password: 'password'
+        password: 'password',
+        login: 'login'
     }
 }

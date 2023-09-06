@@ -24,7 +24,7 @@ const loadingClass = computed(() => {
 })
 
 // METHODS
-const getProducts = async () => {
+const getProducts = async () => { // ESTE MÉTODO MOVERLO A ProductApiClient
     await productsStore.fetchProducts()
     loading.value = false
 }

@@ -9,7 +9,7 @@ const login = () => {
 </script>
 
 <template>
-    <div></div>
+    <div class="logo-side">Logo</div>
     <div>
         <h1>LoginView</h1>
         <label for="user">{{ $t('auth.username') }}</label>
@@ -17,7 +17,7 @@ const login = () => {
         <label for="password">{{ $t('auth.password') }}</label>
         <input id="password" name="password" type="password">
         <Button
-            :title="$t('Login')"
+            :title="$t('auth.login')"
             :type="'action'"
             @click="login"
         />
@@ -25,5 +25,11 @@ const login = () => {
 </template>
 
 <style scoped>
-
+.logo-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #2d2a4c;
+}
 </style>

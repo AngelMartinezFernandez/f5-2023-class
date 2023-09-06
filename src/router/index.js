@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import authRoutes from "@/modules/auth/router";
+import productRoutes from "@/modules/product/router";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -10,7 +11,8 @@ const router = createRouter({
         await router.push({name: 'auth.login'})
       },
     },
-    authRoutes
+    authRoutes,
+    productRoutes
   ]
 })
 

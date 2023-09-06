@@ -3,8 +3,10 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <RouterView />
+    <RouterView name="aside"/>
+    <RouterView/>
 </template>
 
-<style scoped>
+<style>
+@import './assets/main.css';
 </style>

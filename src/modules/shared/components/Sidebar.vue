@@ -4,7 +4,7 @@
             <span>UserName</span>
         </div>
         <div class="sidebar-nav">
-            <router-link to="/" class="nav-button text">Products</router-link>
+            <router-link to="/products" class="nav-button text">Products</router-link>
             <router-link to="/cart" class="nav-button text">Cart</router-link>
         </div>
         <div class="sidebar-footer text total">

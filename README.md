@@ -1,5 +1,20 @@
 # f5-class
-
+Temas a tratar
+```sh
+Internacionalización
+```
+```sh
+Auth
+```
+```sh
+Modularización
+```
+```sh
+Routing
+```
+```sh
+Atomic y reutilización de componentes
+```
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup

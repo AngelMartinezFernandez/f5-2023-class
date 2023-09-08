@@ -1,4 +1,4 @@
-import Sidebar from "@/modules/shared/components/Sidebar.vue";
+import Sidebar from "@/modules/global/components/Sidebar.vue";
 import CartView from "@/modules/cart/views/CartView.vue";
 
 export default {

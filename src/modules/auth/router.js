@@ -1,5 +1,5 @@
 import LoginView from "@/modules/auth/views/LoginView.vue";
-import router from "@/router";
+import LogoSidebar from "@/modules/auth/components/LogoSidebar.vue";
 
 export default {
     path: '/auth',
@@ -8,7 +8,10 @@ export default {
         {
             path: 'login',
             name: 'auth.login',
-            component: LoginView
+            components: {
+                aside: LogoSidebar,
+                default: LoginView
+            }
         }
     ]
 }

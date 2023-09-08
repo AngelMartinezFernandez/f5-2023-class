@@ -1,5 +1,5 @@
 import ProductsView from "@/modules/product/views/ProductsView.vue";
-import Sidebar from "@/modules/shared/components/Sidebar.vue";
+import Sidebar from "@/modules/global/components/Sidebar.vue";
 
 export default {
     path: '/products',

@@ -11,7 +11,7 @@ const deleteProduct = (itemId) => {
 }
 </script>
 <template>
-    <div class="content">
+    <div class="view-content">
         <h1 v-if="cartStore.shoppingCart.length === 0">No hay elementos en el carrito</h1>
         <div v-else v-for="item of cartStore.shoppingCart" :key="item.id" class="cart-item-container">
             <CartItem
@@ -24,14 +24,6 @@ const deleteProduct = (itemId) => {
     </div>
 </template>
 <style scoped>
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5vh 0;
-    overflow-y: auto;
-}
 p {
     margin: 0 10px
 }

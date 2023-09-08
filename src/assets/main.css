@@ -1,4 +1,5 @@
 @import url(loading.css);
+@import url(views.css);
 
 :root {
     --primary-color: #2d2a4c;

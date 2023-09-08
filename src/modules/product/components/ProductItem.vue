@@ -26,7 +26,7 @@
 // TENER CSS Y PROPIEDADES COMPUTADAS SI HACEN FALTA NO ESTA MAL, COMO EL CASO DE LA IMAGEN PARA QUE PINTE UNA GENÉRICA SI NO RECIBE
 // AUN ASI, SI SE PONE LÓGICA QUE NO TOCA PERO FUNCIONA ES LO QUE HAY, TIEMPO DE REFACTORIZAR Y APRENDER A HACERLO MEJOR SIEMPRE HAY.
 import { computed } from 'vue'
-import Button from '@/modules/shared/components/Button.vue'
+import Button from '@/modules/global/components/Button.vue'
 
 const props = defineProps( {
     id: {

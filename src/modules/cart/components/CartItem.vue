@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import Button from '@/modules/shared/components/Button.vue'
+import Button from '@/modules/global/components/Button.vue'
 // PROPS
 const props = defineProps( {
     id: {

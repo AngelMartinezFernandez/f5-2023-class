@@ -8,7 +8,9 @@ const router = createRouter({
     {
       path: '/',
       name: 'landing',
-      beforeEnter: async () => {
+      beforeEnter: async (to, from, next) => {
+        // en el método beforeEnter podemos gestionar si tenemos permisos, rol, etc
+        // y si no se tiene pues redireccionamos a donde proceda
         await router.push({name: 'auth.login'})
       },
     },

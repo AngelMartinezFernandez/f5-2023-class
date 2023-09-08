@@ -7,6 +7,7 @@ export default {
     auth: {
         username: 'nombre de usuario',
         password: 'contraseña',
-        login: 'conectarse'
+        login: 'conectarse',
+        register: 'registrarse'
     }
 }

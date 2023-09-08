@@ -3,6 +3,7 @@ import { computed, onBeforeMount, ref } from 'vue'
 import { useProductsStore } from '@/modules/product/store/productStore'
 import { useCartStore } from '@/modules/cart/store/cartStore'
 import ProductItem from '@/modules/product/components/ProductItem.vue'
+import Paginator from "@/modules/global/components/Paginator.vue";
 
 const productsStore = useProductsStore()
 const cartStore = useCartStore()
@@ -33,16 +34,26 @@ const addProduct = (productId) => {
     const product = productsStore.getProductById(productId)
     cartStore.addItemToShoppingCart(product)
 }
+const paginate = (pageModifier) => {
+    console.log(pageModifier)
+    loading.value = true
+    if(pageModifier > 0) productsStore.nextPage()
+    else productsStore.previousPage()
+    getProducts()
+}
 </script>
 
 <template>
-    <div class="content" :class="loadingClass">
-        <div v-if="loading" class="lds-dual-ring"/>
-<!--              LOADING SACADO DE https://loading.io/css/-->
-        <div class="content__products" v-else v-for="product in productsStore.products" :key="product.id">
+    <div v-if="loading" class="view-content" :class="loadingClass">
+        <div  class="lds-dual-ring"/>
+    </div>
+    <!--              LOADING SACADO DE https://loading.io/css/-->
+    <div v-else class="view-content" :class="loadingClass">
+
+        <div class="content__products" v-for="product in productsStore.products" :key="product.id">
             <ProductItem
                 :id="product.id"
-                :image="product.image"
+                :image="product.thumbnail"
                 :noImage="productsStore.noImageSrc"
                 :title="product.title"
                 :description="product.description"
@@ -50,18 +61,15 @@ const addProduct = (productId) => {
                 @addProduct="addProduct"
             />
         </div>
+        <Paginator
+            :current-page="productsStore.currentPage"
+            :total-pages="productsStore.totalPages"
+            @paginate="paginate"
+        />
     </div>
 </template>
 
 <style scoped>
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5vh 0;
-    overflow-y: auto;
-}
-
 .content__products {
     width: 90%;
 }

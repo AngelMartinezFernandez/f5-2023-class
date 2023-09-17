@@ -47,7 +47,7 @@ npm run build
 > Generamos unos JSON de traducciones, todos tienen la misma estructura pero cambian los valores por cada idioma.
 
 ### Modularización
-> Gestionaremos nuestro de manera modularizada y ordenada (en la medida de lo posible).
+> Gestionaremos nuestro proyecto de manera modularizada y ordenada (en la medida de lo posible).
 > Ejemplos en este proyecto puede ser el sistema de carpetas, las rutas y los diferentes modulos de pinia (stores)
 > También como gestionamos las llamadas, creando una conexión genérica con axios y aplicando los datos necesarios
 > una sola vez y concatenando solo las partes variables de nuestros endpoints.

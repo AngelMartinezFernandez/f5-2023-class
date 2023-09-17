@@ -1,13 +1,16 @@
 <script setup>
+const DEFAULT_PAGE = 1
+const NEXT_PAGE_MODIFIER = +1
+const PREVIOUS_PAGE_MODIFIER = -1
 
 const props = defineProps({
     currentPage: {
         type: Number,
-        default: 1
+        default: DEFAULT_PAGE
     },
     totalPages: {
         type: Number,
-        default: 1
+        default: DEFAULT_PAGE
     }
 })
 const emits = defineEmits(['paginate'])
@@ -21,11 +24,11 @@ const emitPageModifier = (pageModifier) => {
 
 <template>
 <div class="paginator-container">
-    <span @click="emitPageModifier(-1)">{{ $t('global.back') }}</span>
+    <span @click="emitPageModifier(PREVIOUS_PAGE_MODIFIER)">{{ $t('global.back') }}</span>
     <span>{{ props.currentPage }}</span>
-    <span>de</span>
+    <span>{{ 'de' }}</span>
     <span>{{ props.totalPages }}</span>
-    <span @click="emitPageModifier(+1)">{{ $t('global.next') }}</span>
+    <span @click="emitPageModifier(NEXT_PAGE_MODIFIER)">{{ $t('global.next') }}</span>
 </div>
 </template>
 
